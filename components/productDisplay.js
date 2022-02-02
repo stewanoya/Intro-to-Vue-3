@@ -18,6 +18,7 @@ app.component("productDisplay", {
       <p v-if="inStock">In Stock</p>
       <p v-else>Out of Stock</p>
       <p>Shipping: {{shipping}}</p>
+      
       <product-details :details="details"></product-details>
 
       <div 
