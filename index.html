@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./assets/styles.css" />
     <!-- Import Vue.js -->
 <<<<<<< HEAD
+<<<<<<< HEAD
     <script src="https://unpkg.com/vue@next"></script>
   </head>
   <body>
@@ -18,6 +19,8 @@
     <!-- Mount App -->
     <script src="./main.js"></script>
 =======
+=======
+>>>>>>> L4-start
     <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
   </head>
   <body>
@@ -28,10 +31,19 @@
         <div class="product-container">
           <div class="product-image">
             <img :src="image" />
+<<<<<<< HEAD
             <a :href="url">Click me</a>
+=======
+>>>>>>> L4-start
           </div>
           <div class="product-info">
             <h1>{{ product }}</h1>
+            <p v-if="inventory > 10">In Stock</p>
+            <p v-else-if="inventory <= 10 && inventory > 0">
+              Almost Out of Stock
+            </p>
+            <p v-else>Out of Stock</p>
+            <p v-if="onSale">Item is on sale!</p>
           </div>
         </div>
       </div>
