@@ -6,21 +6,6 @@
     <!-- Import Styles -->
     <link rel="stylesheet" href="./assets/styles.css" />
     <!-- Import Vue.js -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <script src="https://unpkg.com/vue@next"></script>
-  </head>
-  <body>
-    <div id="app">
-      <h1>{{product}}</h1>
-      <p>{{description}}</p>
-    </div>
-
-    <!-- Mount App -->
-    <script src="./main.js"></script>
-=======
-=======
->>>>>>> L4-start
     <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
   </head>
   <body>
@@ -30,20 +15,21 @@
       <div class="product-display">
         <div class="product-container">
           <div class="product-image">
-            <img :src="image" />
-<<<<<<< HEAD
-            <a :href="url">Click me</a>
-=======
->>>>>>> L4-start
+            <img v-bind:src="image" />
           </div>
           <div class="product-info">
             <h1>{{ product }}</h1>
-            <p v-if="inventory > 10">In Stock</p>
-            <p v-else-if="inventory <= 10 && inventory > 0">
-              Almost Out of Stock
-            </p>
+            <p v-if="inStock">In Stock</p>
             <p v-else>Out of Stock</p>
-            <p v-if="onSale">Item is on sale!</p>
+            <ul>
+              <li v-for="detail in details">{{detail}}</li>
+            </ul>
+            <div v-for="variant in variants" :key="variant.id">
+              {{variant.color}}
+            </div>
+            <ul>
+              <li v-for="size in sizes">{{size}}</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -53,7 +39,6 @@
     <script src="./main.js"></script>
 
     <!-- Mount App -->
->>>>>>> L3-start
     <script>
       const mountedApp = app.mount("#app");
     </script>
