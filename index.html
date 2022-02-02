@@ -6,6 +6,7 @@
     <!-- Import Styles -->
     <link rel="stylesheet" href="./assets/styles.css" />
     <!-- Import Vue.js -->
+<<<<<<< HEAD
     <script src="https://unpkg.com/vue@next"></script>
   </head>
   <body>
@@ -16,6 +17,31 @@
 
     <!-- Mount App -->
     <script src="./main.js"></script>
+=======
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="nav-bar"></div>
+
+      <div class="product-display">
+        <div class="product-container">
+          <div class="product-image">
+            <img :src="image" />
+            <a :href="url">Click me</a>
+          </div>
+          <div class="product-info">
+            <h1>{{ product }}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Import App -->
+    <script src="./main.js"></script>
+
+    <!-- Mount App -->
+>>>>>>> L3-start
     <script>
       const mountedApp = app.mount("#app");
     </script>
